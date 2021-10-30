@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+
+// JSON stringify
+let obj = {name : "Jin", age : 20}
+let str = JSON.stringify(obj)
+
+// They are different data type
+console.log(obj) // JavaScript Object data type
+console.log(str) // String data type
+
+// JSON parse (convert from JavaScript Object type to String type)
+let newObj = JSON.parse(str)
+console.log(newObj)
+</script>

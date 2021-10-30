@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+</head>
+<body>
+    <div>
+        <h1>New user</h1>
+        <div>
+  
+            <span>Email</span><input type="text" name="email" id="email"><br/>
+            <span>Password</span><input type="password" name="password" id="password"><br/>
+            <span>Re-type password</span><input type="password" name="repassword" id="repassword"><br/>
+            <div id="error"></div>
+            <button id="btnCreate">Create</button>
+  
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    document.getElementById("btnCreate").addEventListener('click', function(e){
+        var email = document.getElementById("email")
+        var password = document.getElementById("password")
+        var repassword = document.getElementById("repassword")
+        if(password.value != repassword.value){
+            //alert("Please check password")
+            document.getElementById("error").innerHTML = "Please check password"
+            return;
+        }
+        var user = {email: email.value, password: password.value}
+        console.log(user)
+        // should convert to string type (Java script object)
+        var userJson = JSON.stringify(user)
+        console.log("This is converted String type : ",userJson)
+    })
+
+ </script>

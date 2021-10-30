@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 1</title>
+</head>
+<body>
+    <div>
+        <h1>Add a post</h1>
+        <div>
+            <span>ID</span><input type="text" name="id" id="id"><br/>
+            <span>Title</span><input type="text" name="title" id="title"><br/>
+            <span>Context</span><input type="text" name="context" id="context"><br/>
+            <span>Author</span><input type="text" name="author" id="author"><br/>
+            <p>Publish time and date : <span id="datetime"></span></p></br>
+            <button id="btnCreate">Add a post</button>
+            <div id="error"></div>
+
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    document.querySelector("#btnCreate").addEventListener("click", function(e){
+        var id = document.querySelector("#id")
+        var title = document.querySelector("#title")
+        var context = document.querySelector("#context")
+        var author = document.querySelector("#author")
+
+
+        var dt = new Date();
+        document.querySelector("#datetime").innerHTML = dt.toLocaleString();
+    })
+</script>
